@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Head from "next/head";
+import Navebar from "./components/Navbar";
 
 // Importa as fontes locais
 const geistSans = localFont({
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{
-          backgroundImage: "url('/back.jpg')", // Substitua pelo caminho correto
+          backgroundImage: "url('/back.webp')", // Substitua pelo caminho correto
           backgroundSize: "cover", // A imagem cobre todo o background
           backgroundPosition: "center", // Centraliza a imagem
           backgroundRepeat: "no-repeat", // Evita que a imagem se repita
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
           
         }}
       >
+        <Navebar />
         {children}
         <Footer />
       </body>
