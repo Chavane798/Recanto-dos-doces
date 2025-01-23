@@ -8,21 +8,21 @@ const products = {
       {
           imageSrc: "/milco.jpg",
           name: "Milco",
-          price: 1000,
+          price: 15,
           quantity: "10",
           description: "Bites de morango saborosos."
       },
       {
           imageSrc: "/oreo.jpeg",
           name: "Oreo",
-          price: 50,
+          price: 90,
           quantity: "30",
           description: "Biscoitos recheados com creme de baunilha."
       },
       {
           imageSrc: "/cream-cracker.jpeg",
           name: "Cream Cracker",
-          price: 25,
+          price: 70,
           quantity: "40",
           description: "Biscoitos crocantes ideais para lanches rápidos."
       }
@@ -38,14 +38,14 @@ const products = {
       {
           imageSrc: "/pepsi.jpeg",
           name: "Pepsi",
-          price: 28,
+          price: 25,
           quantity: "15",
           description: "Refrigerante refrescante com sabor marcante."
       },
       {
           imageSrc: "/fanta.jpeg",
           name: "Fanta Laranja",
-          price: 25,
+          price: 30,
           quantity: "20",
           description: "Refrigerante sabor laranja com gás."
       }
@@ -54,21 +54,21 @@ const products = {
       {
           imageSrc: "/sandes.jpg",
           name: "Sandes",
-          price: 1000,
+          price: 100,
           quantity: "5",
           description: "Sandes disponíveis nos tamanhos médio e grande."
       },
       {
           imageSrc: "/pizza.jpg",
           name: "Mini Pizza",
-          price: 500,
+          price: 120,
           quantity: "8",
           description: "Mini pizzas com queijo e pepperoni."
       },
       {
           imageSrc: "/hamburguer.jpeg",
           name: "Hambúrguer",
-          price: 800,
+          price: 250,
           quantity: "10",
           description: "Hambúrgueres suculentos com acompanhamentos variados."
       }
@@ -77,7 +77,7 @@ const products = {
       {
           imageSrc: "/chips.jpg",
           name: "Batata Chips",
-          price: 150,
+          price: 50,
           quantity: "20",
           description: "Batatas chips crocantes, sabor barbecue."
       },
@@ -107,14 +107,14 @@ const products = {
       {
           imageSrc: "/agua.jpg",
           name: "Água Mineral",
-          price: 10,
+          price: 20,
           quantity: "50",
           description: "Água mineral pura e cristalina."
       },
       {
           imageSrc: "/cha-gelado.jpeg",
           name: "Chá Gelado",
-          price: 20,
+          price: 40,
           quantity: "10",
           description: "Chá gelado com sabores de pêssego e limão."
       }
@@ -123,14 +123,14 @@ const products = {
       {
           imageSrc: "/chocolate.jpg",
           name: "Chocolate ao Leite",
-          price: 200,
+          price: 140,
           quantity: "12",
           description: "Chocolate ao leite cremoso, derrete na boca."
       },
       {
           imageSrc: "/cookies.jpg",
           name: "Cookies",
-          price: 300,
+          price: 100,
           quantity: "25",
           description: "Cookies com gotas de chocolate, crocantes e deliciosos."
       },
