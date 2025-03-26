@@ -164,56 +164,79 @@ export default function Product() {
   }
 
   return (
-    <div className="container mx-auto p-4 bg-red-300 rounded-xl shadow-md">
-      <Image
-        className="mx-auto mx-auto rounded-full mb-4"
-        src="/recanto-dos-doces.webp"
-        alt="Next.js logo"
-        width={180}
-        height={180}
-      />
-
-      <h1 className="text-3xl font-serif italic font-extrabold text-center bg-rose-200 mb-6 rounded-md py-2">
+    <div className="container mx-auto p-6 bg-red-300 rounded-xl shadow-md">
+      {/* Logo */}
+      <div className="flex justify-center mb-6">
+        <Image
+          className="rounded-full border-4 border-white shadow-lg"
+          src="/recanto-dos-doces.webp"
+          alt="Recanto dos Doces"
+          width={160}
+          height={160}
+        />
+      </div>
+  
+      {/* Título Principal */}
+      <h1 className="text-3xl font-serif italic font-extrabold text-center bg-rose-200 mb-8 rounded-lg py-3 px-6 shadow-sm">
         Produtos
       </h1>
-
-      {/* Iteração sobre as categorias */}
-      {Object.entries(products).map(([category, items]) => (
-        <div key={category} className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4 capitalize">
-            {category}
-          </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {items.map((product, index) => (
-              <li
-                className="border rounded-lg p-4 bg-white shadow hover:shadow-lg transition duration-300 transform hover:scale-105"
-                key={index}
-              >
-                <Image
-                  className="mx-auto rounded-lg"
-                  src={product.imageSrc}
-                  alt={`${product.name} image`}
-                  width={100}
-                  height={100}
-                  loading="lazy"
-                />
-                <h2 className="text-lg font-semibold text-center mt-4">
-                  {product.name}
-                </h2>
-                <p className="text-gray-600 text-center">
-                  Preço: {product.price.toFixed(2)}MT
-                </p>
-                <p className="text-gray-600 text-center">
-                  Quantidade: {product.quantity}
-                </p>
-                <p className="text-gray-600 text-center">
-                  {product.description}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+  
+      {/* Categorias */}
+      <div className="space-y-10">
+        {Object.entries(products).map(([category, items]) => (
+          <section key={category} className="mb-10">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6 capitalize border-b-2 border-rose-200 pb-2">
+              {category}
+            </h2>
+            
+            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {items.map((product, index) => (
+                <li
+                  className="flex flex-col border rounded-xl p-5 bg-white shadow-md hover:shadow-lg transition-all duration-300"
+                  key={index}
+                >
+                  {/* Imagem centralizada */}
+                  <div className="flex justify-center mb-4">
+                    <Image
+                      className="rounded-lg object-cover h-32 w-32"
+                      src={product.imageSrc}
+                      alt={`${product.name}`}
+                      width={128}
+                      height={128}
+                      loading="lazy"
+                    />
+                  </div>
+  
+                  {/* Informações do produto */}
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-semibold text-center mb-2">
+                      {product.name}
+                    </h3>
+                    <p className="text-gray-600 text-center text-sm mb-4">
+                      {product.description}
+                    </p>
+                  </div>
+  
+                  {/* Preço e botão alinhados na base */}
+                  <div className="mt-auto">
+                    <div className="flex justify-between items-center mt-4">
+                      <span className="text-lg font-bold text-pink-600">
+                        {product.price.toFixed(2)}MT
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {product.quantity} un
+                      </span>
+                    </div>
+                    <button className="w-full mt-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors">
+                      Comprar
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
     </div>
   );
 }
